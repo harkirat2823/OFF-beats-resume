@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Offbeats — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Clash+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<style>
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#070709;
+  --or:#ff6a1a;--or2:#ff9a4a;--or3:#ffba70;
+  --neon-or:rgba(255,106,26,1);
+  --glow-sm:0 0 12px rgba(255,106,26,.6);
+  --glow-md:0 0 30px rgba(255,106,26,.5),0 0 60px rgba(255,106,26,.2);
+  --glow-lg:0 0 50px rgba(255,106,26,.7),0 0 100px rgba(255,106,26,.3),0 0 200px rgba(255,106,26,.1);
+  --glass:rgba(255,255,255,.04);
+  --glass-border:rgba(255,255,255,.08);
+  --glass-border-or:rgba(255,106,26,.35);
+  --wh:#f5f0eb;--mu:#666;
+  --fd:'Clash Display',sans-serif;
+  --fb:'Outfit',sans-serif;
+  --fm:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--wh);font-family:var(--fb);overflow-x:hidden;cursor:none}
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+#vol-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9990}
+
+nav{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:500;width:calc(100% - 3rem);max-width:1200px;margin-top:1rem;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.8rem;background:rgba(10,9,12,.7);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--glass-border);border-radius:100px}
+.nlogo{font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wh);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.nlogo-dot{width:8px;height:8px;background:var(--or);border-radius:50%;box-shadow:var(--glow-sm);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.nlinks{display:flex;gap:2rem;list-style:none}
+.nlinks a{font-family:var(--fb);font-size:.82rem;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.nlinks a:hover{color:var(--wh)}
+.ncta{font-family:var(--fb);font-size:.82rem;font-weight:600;color:var(--bg);background:var(--or);padding:.5rem 1.4rem;border-radius:100px;text-decoration:none;transition:box-shadow .25s,transform .2s;box-shadow:0 0 20px rgba(255,106,26,.4)}
+.ncta:hover{box-shadow:var(--glow-md);transform:translateY(-1px)}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;text-align:center;padding:0 2rem;overflow:hidden}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+
+.hero-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,106,26,.12);border:1px solid rgba(255,106,26,.3);border-radius:100px;padding:.35rem .9rem .35rem .45rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s .2s forwards}
+.hero-pill-tag{background:var(--or);color:#000;border-radius:100px;padding:.18rem .65rem;font-weight:700;font-size:.62rem;letter-spacing:.08em}
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.hero-name{font-family:var(--fd);font-size:clamp(4.5rem,13vw,11rem);font-weight:700;line-height:.95;letter-spacing:-.01em;position:relative;opacity:0;animation:fadeUp .9s .35s forwards;perspective:800px;margin-bottom:.5rem}
+.name-3d{display:inline-block;background:linear-gradient(180deg,#fff 0%,var(--or2) 60%,var(--or) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:name3d 6s ease-in-out infinite;transform-style:preserve-3d;text-shadow:none;filter:drop-shadow(0 0 40px rgba(255,106,26,.5))}
+@keyframes name3d{
+  0%,100%{transform:rotateY(0deg) rotateX(2deg);filter:drop-shadow(0 0 40px rgba(255,106,26,.5))}
+  25%{transform:rotateY(-4deg) rotateX(-1deg);filter:drop-shadow(4px 0 50px rgba(255,106,26,.7))}
+  75%{transform:rotateY(4deg) rotateX(1deg);filter:drop-shadow(-4px 0 50px rgba(255,150,60,.7))}
+}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.name-outline{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:clamp(4.5rem,13vw,11rem);font-weight:700;line-height:.95;-webkit-text-fill-color:transparent;-webkit-text-stroke:1px rgba(255,106,26,.25);pointer-events:none;animation:name3d 6s ease-in-out infinite .15s;filter:blur(1px)}
+
+.hero-role{font-family:var(--fb);font-size:clamp(1rem,2.2vw,1.35rem);font-weight:300;color:rgba(255,255,255,.5);letter-spacing:.35em;text-transform:uppercase;opacity:0;animation:fadeUp .8s .55s forwards;margin-bottom:3rem}
+.hero-role span{color:var(--or);font-weight:500}
+
+.hero-desc{font-size:1rem;color:rgba(255,255,255,.4);max-width:520px;line-height:1.8;opacity:0;animation:fadeUp .8s .7s forwards;margin-bottom:3rem}
+.hero-desc strong{color:rgba(255,255,255,.75);font-weight:500}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.hero-btns{display:flex;gap:1rem;justify-content:center;opacity:0;animation:fadeUp .8s .85s forwards}
+.btn-prim{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.88rem;font-weight:600;background:var(--or);color:#000;padding:.75rem 2rem;border-radius:100px;text-decoration:none;transition:box-shadow .25s,transform .2s;box-shadow:0 0 25px rgba(255,106,26,.45);border:none;cursor:none}
+.btn-prim:hover{box-shadow:var(--glow-md);transform:translateY(-2px)}
+.btn-sec{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.88rem;font-weight:500;background:var(--glass);color:rgba(255,255,255,.7);padding:.75rem 2rem;border-radius:100px;text-decoration:none;border:1px solid var(--glass-border);backdrop-filter:blur(12px);transition:border-color .2s,color .2s;cursor:none}
+.btn-sec:hover{border-color:rgba(255,106,26,.5);color:var(--wh)}
+
+.laser{position:absolute;height:1px;pointer-events:none;z-index:1}
+.laser-h{width:60%;left:20%;background:linear-gradient(90deg,transparent,var(--or),transparent);animation:laser-h-anim 4s ease-in-out infinite;opacity:.4}
+.laser-v{width:1px;height:50%;top:25%;background:linear-gradient(180deg,transparent,var(--or),transparent);animation:laser-v-anim 5s ease-in-out infinite;opacity:.3}
+.laser1{top:30%}
+.laser2{top:60%;animation-delay:2s}
+.lv1{left:25%}
+.lv2{right:25%;animation-delay:1.5s}
+@keyframes laser-h-anim{0%,100%{opacity:.15;width:40%}50%{opacity:.5;width:70%}}
+@keyframes laser-v-anim{0%,100%{opacity:.1;height:35%}50%{opacity:.4;height:65%}}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fadeUp .8s 1.2s forwards}
+.scroll-hint span{font-family:var(--fm);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.scroll-line{width:1px;height:40px;background:linear-gradient(var(--or),transparent);animation:sla 2s ease-in-out infinite}
+@keyframes sla{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.sec{padding:8rem 2rem;position:relative;z-index:2;max-width:1200px;margin:0 auto}
+.sec-full{padding:8rem 0;position:relative;z-index:2}
+.sec-full .inner{max-width:1200px;margin:0 auto;padding:0 2rem}
+.stag{font-family:var(--fm);font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--or);display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.stag::before{content:'';width:20px;height:1px;background:var(--or);box-shadow:var(--glow-sm)}
+.stitle{font-family:var(--fd);font-size:clamp(2.8rem,6vw,5.5rem);font-weight:700;line-height:1;letter-spacing:-.01em;margin-bottom:4rem}
+.stitle .glow-txt{background:linear-gradient(135deg,#fff 0%,var(--or2) 50%,var(--or) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(255,106,26,.4))}
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.div-glow{height:1px;background:linear-gradient(90deg,transparent,rgba(255,106,26,.4),transparent);position:relative;z-index:2}
+
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.glass-card{background:var(--glass);backdrop-filter:blur(20px) saturate(150%);border:1px solid var(--glass-border);border-radius:20px;padding:2.5rem;transition:border-color .3s,box-shadow .3s}
+.glass-card:hover{border-color:var(--glass-border-or);box-shadow:0 0 40px rgba(255,106,26,.08)}
+.about-img{aspect-ratio:4/5;background:radial-gradient(ellipse at 50% 80%,rgba(255,106,26,.2) 0%,rgba(255,106,26,.05) 40%,transparent 70%);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid rgba(255,106,26,.2)}
+.about-letter{font-family:var(--fd);font-size:16rem;font-weight:700;background:linear-gradient(180deg,rgba(255,106,26,.25),rgba(255,106,26,.05));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;user-select:none;animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.about-badge-wrap{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);white-space:nowrap}
+.about-badge{background:rgba(255,106,26,.15);backdrop-filter:blur(12px);border:1px solid rgba(255,106,26,.4);border-radius:100px;padding:.4rem 1rem;font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;color:var(--or);text-transform:uppercase;box-shadow:0 0 20px rgba(255,106,26,.2)}
+
+.about-img::after{content:'';position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(180deg,transparent 0%,rgba(255,106,26,.25) 100%);pointer-events:none}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.about-text p{font-size:1rem;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:1.3rem}
+.about-text strong{color:var(--wh);font-weight:600}
+.about-text .hl{color:var(--or2)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--glass-border)}
+.info-item .il{font-family:var(--fm);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-bottom:.3rem}
+.info-item .iv{font-size:.95rem;font-weight:600;color:var(--wh)}
+.info-item .iv.active{color:var(--or)}
+
+
+.skills-bg{background:linear-gradient(180deg,var(--bg) 0%,rgba(15,8,0,.95) 50%,var(--bg) 100%)}
+.skgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.sk-card{background:var(--glass);backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s;cursor:none}
+.sk-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent);transform:scaleX(0);transform-origin:center;transition:transform .4s}
+.sk-card:hover{border-color:rgba(255,106,26,.3);box-shadow:0 0 40px rgba(255,106,26,.1),inset 0 0 40px rgba(255,106,26,.03);transform:translateY(-4px)}
+.sk-card:hover::before{transform:scaleX(1)}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.sk-card::after{content:'';position:absolute;top:0;left:0;width:60px;height:60px;background:radial-gradient(circle at 0 0,rgba(255,106,26,.15),transparent 70%);pointer-events:none}
+.sk-ico{width:44px;height:44px;background:rgba(255,106,26,.1);border:1px solid rgba(255,106,26,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;transition:box-shadow .3s}
+.sk-card:hover .sk-ico{box-shadow:0 0 20px rgba(255,106,26,.3)}
+.sk-ico svg{width:20px;height:20px;stroke:var(--or);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.sk-name{font-family:var(--fd);font-size:1.5rem;font-weight:600;margin-bottom:1rem;letter-spacing:.01em}
+.sk-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.06em;padding:.25rem .65rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.5);border-radius:100px;text-transform:uppercase;transition:all .2s}
+.tag.on{background:rgba(255,106,26,.12);border-color:rgba(255,106,26,.35);color:var(--or2)}
+.sk-card:hover .tag{border-color:rgba(255,106,26,.2);color:rgba(255,255,255,.6)}
+.sk-card:hover .tag.on{border-color:rgba(255,106,26,.5);color:var(--or)}
+.pgrid{display:grid;gap:1.5rem}
+.pcard{display:grid;grid-template-columns:1fr 1.2fr;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;transition:border-color .35s,box-shadow .35s,transform .35s;cursor:none}
+.pcard:hover{border-color:rgba(255,106,26,.4);box-shadow:0 8px 60px rgba(255,106,26,.15);transform:translateY(-4px)}
+.pcard:nth-child(even){direction:rtl}.pcard:nth-child(even)>*{direction:ltr}
+.pvis{position:relative;min-height:260px;overflow:hidden}
+.pvi{width:100%;height:100%;min-height:260px;display:flex;align-items:center;justify-content:center;position:relative}
+.pv1{background:radial-gradient(ellipse at 50% 100%,rgba(255,90,20,.3) 0%,rgba(15,6,0,.9) 60%)}
+.pv2{background:radial-gradient(ellipse at 50% 100%,rgba(255,130,0,.25) 0%,rgba(0,8,20,.9) 60%)}
+.pv3{background:radial-gradient(ellipse at 50% 100%,rgba(255,60,100,.2) 0%,rgba(10,0,20,.9) 60%)}
+.pv4{background:radial-gradient(ellipse at 50% 100%,rgba(0,200,150,.2) 0%,rgba(0,12,10,.9) 60%)}
+.pv-grid{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,106,26,.04) 0,rgba(255,106,26,.04) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(255,106,26,.04) 0,rgba(255,106,26,.04) 1px,transparent 1px,transparent 40px)}
+.pv-ico{position:relative;z-index:1}
+.pv-ico svg{width:52px;height:52px;stroke:rgba(255,106,26,.7);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 16px rgba(255,106,26,.6));transition:filter .3s,stroke .3s}
+.pcard:hover .pv-ico svg{stroke:var(--or2);filter:drop-shadow(0 0 28px rgba(255,150,60,.9))}
+.pv-glow{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--or),transparent);opacity:0;transition:opacity .3s}
+.pcard:hover .pv-glow{opacity:1}
+.pv-num{position:absolute;bottom:0;right:1rem;font-family:var(--fd);font-size:8rem;font-weight:700;color:rgba(255,106,26,.07);line-height:1;transition:color .3s}
+.pcard:hover .pv-num{color:rgba(255,106,26,.14)}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.pinfo{padding:2.5rem;display:flex;flex-direction:column;justify-content:center}
+.pnum{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;color:var(--or);margin-bottom:.75rem;opacity:.8}
+.ptit{font-family:var(--fd);font-size:1.9rem;font-weight:600;letter-spacing:.01em;margin-bottom:.9rem;line-height:1.1}
+.pdesc{font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.45);margin-bottom:1.3rem}
+.ptags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
+.plink{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--or);text-decoration:none;transition:gap .2s,text-shadow .2s;width:fit-content}
+.plink:hover{gap:1rem;text-shadow:var(--glow-sm)}
+.plink svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.contact-wrap{position:relative}
+.contact-glow-orb{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,106,26,.12) 0%,transparent 65%);top:-200px;left:-200px;pointer-events:none;animation:orb-p 8s ease-in-out infinite}
+@keyframes orb-p{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:.6}}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.chd{font-family:var(--fd);font-size:clamp(2.5rem,5vw,4rem);font-weight:700;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-.01em}
+.chd span{background:linear-gradient(135deg,var(--or2),var(--or));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 15px rgba(255,106,26,.4))}
+.cp{font-size:.98rem;line-height:1.8;color:rgba(255,255,255,.45);margin-bottom:2rem}
+.socs{display:flex;flex-wrap:wrap;gap:.7rem}
+.sl{display:flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.45);background:var(--glass);backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:100px;padding:.5rem 1rem;text-decoration:none;transition:border-color .2s,color .2s,box-shadow .2s;cursor:none}
+.sl:hover{border-color:rgba(255,106,26,.45);color:var(--or);box-shadow:0 0 16px rgba(255,106,26,.15)}
+.sl svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.cform{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:2.5rem}
+.fg{margin-bottom:1.3rem}
+.fl{font-family:var(--fm);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:.4rem}
+.fi,.ft{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;color:var(--wh);font-family:var(--fb);font-size:.92rem;padding:.8rem 1rem;outline:none;transition:border-color .2s,box-shadow .2s;resize:none}
+.fi:focus,.ft:focus{border-color:rgba(255,106,26,.5);box-shadow:0 0 0 3px rgba(255,106,26,.08)}
+.ft{height:110px}
+.fi::placeholder,.ft::placeholder{color:rgba(255,255,255,.2)}
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+footer{padding:2rem 2rem;border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:2;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.flogo{font-family:var(--fm);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.flogo span{color:var(--or)}
+.fcp{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.fbk{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s;cursor:none}
+.fbk:hover{color:var(--or)}
+.fbk svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+.sr{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.sr.from-left{transform:translateX(-40px)}
+.sr.from-right{transform:translateX(40px)}
+.sr.v{opacity:1;transform:translate(0)}
+
+.stats-row{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;margin:5rem 0 0}
+.stat-glass{background:var(--glass);backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:16px;padding:1.5rem 2.5rem;text-align:center;transition:border-color .3s,box-shadow .3s}
+.stat-glass:hover{border-color:rgba(255,106,26,.3);box-shadow:0 0 30px rgba(255,106,26,.1)}
+.stat-n{font-family:var(--fd);font-size:3rem;font-weight:700;background:linear-gradient(180deg,#fff,var(--or));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 10px rgba(255,106,26,.4));line-height:1}
+.stat-l{font-family:var(--fm);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.4rem}
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+@media(max-width:900px){
+  nav{padding:.75rem 1.2rem}.nlinks{display:none}
+  .about-grid,.cgrid{grid-template-columns:1fr;gap:2.5rem}
+  .skgrid{grid-template-columns:1fr}
+  .pcard{grid-template-columns:1fr}.pcard:nth-child(even){direction:ltr}
+  .pvis{min-height:180px}
+  .stats-row{gap:1rem}
+  footer{flex-direction:column;gap:.8rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="ring"></div>
+
+<canvas id="vol-bg"></canvas>
+
+
+<nav id="nav">
+  <a href="#" class="nlogo"><span class="nlogo-dot"></span>OFFBEATS</a>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="ncta">Hire Me</a>
+</nav>
+
+<section class="hero" id="home">
+
+  <div class="laser laser-h laser1"></div>
+  <div class="laser laser-h laser2"></div>
+  <div class="laser laser-v lv1"></div>
+  <div class="laser laser-v lv2"></div>
+
+  <div class="hero-pill">
+    <span class="hero-pill-tag">Available</span>
+    Web Designers &amp; Developer · 2026
+  </div>
+
+  <div class="hero-name">
+    <span class="name-3d">OFFBEATS</span>
+    <div class="name-outline">OFFBEATS</div>
+  </div>
+
+  <p class="hero-role"><span>Web</span> Designer · Full Stack <span>Developer Team</span></p>
+
+  <p class="hero-desc">
+    <strong>Team of students</strong> at Chandigarh University,  —
+    building digital experiences that blend beautiful design with clean, functional engineering.
+  </p>
+
+  <div class="hero-btns">
+    <a href="#projects" class="btn-prim">
+      View Projects
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <a href="#contact" class="btn-sec">
+      Get in Touch
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<div class="mwrap">
+  <div class="mtrack" id="mq"></div>
+</div>
+
+
+<section id="about">
+  <div class="sec">
+    <div class="stag sr">About Me</div>
+    <h2 class="stitle sr"><span class="glow-txt">WHO</span> WE ARE</h2>
+
+    <div class="about-grid">
+      <div class="sr from-left">
+        <div class="glass-card" style="padding:0;overflow:hidden">
+          <div class="about-img">
+            <div class="about-letter">O</div>
+            <div class="about-badge-wrap"><div class="about-badge">Harkirat · Bhumika · Nisha</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sr from-right">
+        <div class="about-text">
+          <p>Hey — We'are <strong>Offbeats</strong>, a <span class="hl">Team of 3 students</span> at <strong>Chandigarh University</strong>. We sit at the intersection of design and engineering, obsessing over every detail.</p>
+          <p>Whether We'are wireframing a user flow in Figma or wiring up a full-stack app with <span class="hl">React + Django + PostgreSQL</span>, We thrive on the full spectrum of product building.</p>
+          <p><strong>Philosophy:</strong> Design isn't decoration — it's communication. Every interface should make someone's life a little easier and a lot more delightful.</p>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">College</div><div class="iv">Chandigarh University</div></div>
+            <div class="info-item"><div class="il">Semester</div><div class="iv">2nd Sem · 2025–26</div></div>
+            <div class="info-item"><div class="il">Focus</div><div class="iv">Web desginers + Full Stack</div></div>
+            <div class="info-item"><div class="il">Status</div><div class="iv active">Open to Work ✓</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-glass sr"><div class="stat-n">6+</div><div class="stat-l">Projects Built</div></div>
+      <div class="stat-glass sr"><div class="stat-n">2nd</div><div class="stat-l">Semester</div></div>
+      <div class="stat-glass sr"><div class="stat-n">5+</div><div class="stat-l">Technologies</div></div>
+      <div class="stat-glass sr"><div class="stat-n">CU</div><div class="stat-l">Chandigarh</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="div-glow"></div>
+
+
+<section id="skills" class="sec-full skills-bg">
+  <div class="inner">
+    <div class="stag sr">Expertise</div>
+    <h2 class="stitle sr">WHAT WE <span class="glow-txt">KNOW</span></h2>
+    <div class="skgrid">
+
+      <div class="sk-card sr">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24"><path d="M5 5.5A3.5 3.5 0 018.5 2H12v7H8.5A3.5 3.5 0 015 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 110 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"/><path d="M5 12.5A3.5 3.5 0 018.5 9H12v7H8.5A3.5 3.5 0 015 12.5z"/><path d="M5 19.5A3.5 3.5 0 018.5 16H12v3.5a3.5 3.5 0 11-7 0z"/></svg>
+        </div>
+        <div class="sk-name">Web Design</div>
+        <div class="sk-tags"><span class="tag on">Figma</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">User Research</span><span class="tag">Design Systems</span><span class="tag">Accessibility</span></div>
+      </div>
+
+      <div class="sk-card sr">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="sk-name">Frontend Dev</div>
+        <div class="sk-tags"><span class="tag on">HTML / CSS</span><span class="tag on">TypeScript</span><span class="tag on">React.js</span><span class="tag">Tailwind</span><span class="tag">Animations</span><span class="tag">Responsive</span></div>
+      </div>
+
+      <div class="sk-card sr">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <div class="sk-name">Backend Dev</div>
+        <div class="sk-tags"><span class="tag on">Next.js</span><span class="tag on">Django</span><span class="tag">REST APIs</span><span class="tag">Auth Systems</span><span class="tag">SSR / SSG</span></div>
+      </div>
+
+      <div class="sk-card sr">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="sk-name">Database</div>
+        <div class="sk-tags"><span class="tag on">PostgreSQL</span><span class="tag on">MongoDB</span><span class="tag">Schema Design</span><span class="tag">ORM / Prisma</span><span class="tag">Aggregation</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="div-glow"></div>
+
+
+<section id="projects">
+  <div class="sec">
+    <div class="stag sr">Selected Work</div>
+    <h2 class="stitle sr"><span class="glow-txt">PROJ</span>ECTS</h2>
+    <div class="pgrid">
+
+      <div class="pcard sr">
+        <div class="pvis"><div class="pvi pv1">
+          <div class="pv-grid"></div>
+          <div class="pv-ico"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+          <div class="pv-glow"></div><div class="pv-num">01</div>
+        </div></div>
+        <div class="pinfo">
+          <div class="pnum">01 / Web dev + Full Stack</div>
+          <div class="ptit">ShopFlow</div>
+          <p class="pdesc">Fully responsive e-commerce platform with product catalog, cart management, and order tracking. React frontend + Django REST API + PostgreSQL.</p>
+          <div class="ptags"><span class="tag on">React.js</span><span class="tag on">Django</span><span class="tag on">PostgreSQL</span><span class="tag">TypeScript</span></div>
+          <a href="#" class="plink">Case Study <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+      <div class="pcard sr">
+        <div class="pvis"><div class="pvi pv2">
+          <div class="pv-grid"></div>
+          <div class="pv-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="18"/><rect x="14" y="3" width="7" height="10"/><rect x="14" y="17" width="7" height="4"/></svg></div>
+          <div class="pv-glow"></div><div class="pv-num">02</div>
+        </div></div>
+        <div class="pinfo">
+          <div class="pnum">02 / UX Research + Design</div>
+          <div class="ptit">TaskForge</div>
+          <p class="pdesc">Kanban project management tool built after extensive user research. Drag-and-drop boards, real-time updates via Next.js, MongoDB for flexible storage.</p>
+          <div class="ptags"><span class="tag on">Next.js</span><span class="tag on">MongoDB</span><span class="tag">Figma</span><span class="tag">Tailwind</span></div>
+          <a href="#" class="plink">Case Study <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+      <div class="pcard sr">
+        <div class="pvis"><div class="pvi pv3">
+          <div class="pv-grid"></div>
+          <div class="pv-ico"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+          <div class="pv-glow"></div><div class="pv-num">03</div>
+        </div></div>
+        <div class="pinfo">
+          <div class="pnum">03 / UI Design + Frontend</div>
+          <div class="ptit">NomNom</div>
+          <p class="pdesc">Restaurant discovery and ordering UI concept. Focused on micro-interactions and intuitive search UX. React + TypeScript SPA with smooth dark-mode design.</p>
+          <div class="ptags"><span class="tag on">React.js</span><span class="tag on">TypeScript</span><span class="tag">CSS Animations</span><span class="tag">Figma</span></div>
+          <a href="#" class="plink">Case Study <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+      <div class="pcard sr">
+        <div class="pvis"><div class="pvi pv4">
+          <div class="pv-grid"></div>
+          <div class="pv-ico"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
+          <div class="pv-glow"></div><div class="pv-num">04</div>
+        </div></div>
+        <div class="pinfo">
+          <div class="pnum">04 / Full Stack + Data</div>
+          <div class="ptit">DataPulse</div>
+          <p class="pdesc">Real-time analytics dashboard for student performance. Django aggregates data into a Next.js dashboard with interactive charts, powered by PostgreSQL.</p>
+          <div class="ptags"><span class="tag on">Next.js</span><span class="tag on">Django</span><span class="tag on">PostgreSQL</span><span class="tag">Chart.js</span></div>
+          <a href="#" class="plink">Case Study <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="div-glow"></div>
+
+
+<section id="contact">
+  <div class="sec">
+    <div class="stag sr">Let's Connect</div>
+    <h2 class="stitle sr">GET IN <span class="glow-txt">TOUCH</span></h2>
+    <div class="cgrid contact-wrap">
+      <div class="contact-glow-orb"></div>
+      <div class="sr from-left">
+        <div class="chd">Let's build<br>something<br><span>remarkable.</span></div>
+        <p class="cp">Open to internships, freelance projects, or just a good conversation about design and code. Drop a message — I'd love to connect.</p>
+        <div class="socs">
+          <a href="#" class="sl"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a>
+          <a href="#" class="sl"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+          <a href="#" class="sl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Behance</a>
+          <a href="#" class="sl"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>Twitter</a>
+          <a href="#" class="sl"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>YouTube</a>
+        </div>
+      </div>
+      <div class="sr from-right">
+        <div class="cform">
+          <div class="fg"><label class="fl">Your Name</label><input type="text" class="fi" placeholder="John Doe"/></div>
+          <div class="fg"><label class="fl">Email Address</label><input type="email" class="fi" placeholder="john@example.com"/></div>
+          <div class="fg"><label class="fl">Subject</label><input type="text" class="fi" placeholder="Internship / Project Collaboration"/></div>
+          <div class="fg"><label class="fl">Message</label><textarea class="ft" placeholder="Tell me about what you have in mind..."></textarea></div>
+          <button class="btn-prim" style="width:100%;justify-content:center;font-size:.88rem">
+            Send Message
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">OFF<span>BEATS</span></div>
+  <div class="fcp">© 2026 · Chandigarh University · Built with obsession</div>
+  <a href="#home" class="fbk"><svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>Back to top</a>
+</footer>
+
+<script>
+
+const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function rf(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(rf)})();
+document.querySelectorAll('a,button,.pcard,.sk-card,.stat-glass,.glass-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.classList.add('h');ring.classList.add('h')});
+  el.addEventListener('mouseleave',()=>{cur.classList.remove('h');ring.classList.remove('h')});
+});
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+
+const srs=document.querySelectorAll('.sr');
+const sio=new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('v'),i*80);
+      sio.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+srs.forEach(el=>sio.observe(el));
+
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.style.background=scrollY>80?'rgba(7,7,9,.92)':'rgba(10,9,12,.7)';
+});
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+const vc=document.getElementById('vol-bg');
+const vx=vc.getContext('2d');
+let VW,VH;
+function vresize(){VW=vc.width=window.innerWidth;VH=vc.height=window.innerHeight;}
+vresize();window.addEventListener('resize',vresize);
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+const COLS=18;
+let colData=[];
+function buildCols(){
+  colData=[];
+  const step=VW/COLS;
+  for(let i=0;i<COLS;i++){
+    colData.push({
+      x:i*step+step/2,
+      baseH:VH*(0.35+Math.random()*.5),
+      phase:Math.random()*Math.PI*2,
+      speed:0.004+Math.random()*.006,
+      width:step*0.55,
+      alpha:0.15+Math.random()*.25,
+      hue:Math.random()<.8?22:Math.random()<.5?35:10, 
+    });
+  }
+}
+buildCols();
+window.addEventListener('resize',()=>{vresize();buildCols()});
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+let vt=0;
+
+let mouseInfluence={x:VW/2,y:VH/2};
+document.addEventListener('mousemove',e=>{mouseInfluence.x=e.clientX;mouseInfluence.y=e.clientY});
+
+function drawVol(){
+  requestAnimationFrame(drawVol);
+  vt+=.012;
+  vx.clearRect(0,0,VW,VH);
+
+  colData.forEach((col,i)=>{
+    const wave=Math.sin(vt*col.speed*80+col.phase);
+    const h=col.baseH*(0.6+0.4*wave);
+    const x=col.x;
+
+
+    const dist=Math.abs(x-mouseInfluence.x)/VW;
+    const boost=Math.max(0,1-dist*3.5)*.4;
+    const finalAlpha=col.alpha+boost;
+    const finalH=h*(1+boost*.5);
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+
+    const grad=vx.createLinearGradient(x,VH,x,VH-finalH);
+    const sat=70+Math.round(boost*30);
+    grad.addColorStop(0,`hsla(${col.hue},${sat}%,55%,${finalAlpha})`);
+    grad.addColorStop(0.4,`hsla(${col.hue},${sat}%,50%,${finalAlpha*.55})`);
+    grad.addColorStop(0.75,`hsla(${col.hue},60%,45%,${finalAlpha*.2})`);
+    grad.addColorStop(1,`hsla(${col.hue},60%,45%,0)`);
+
+    vx.beginPath();
+    vx.fillStyle=grad;
+    const w=col.width*(0.8+0.2*Math.abs(wave));
+    vx.rect(x-w/2,VH-finalH,w,finalH);
+    vx.fill();
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+
+    const capR=vx.createRadialGradient(x,VH-finalH,0,x,VH-finalH,w*1.5);
+    capR.addColorStop(0,`hsla(${col.hue+10},90%,70%,${finalAlpha*.9})`);
+    capR.addColorStop(1,`hsla(${col.hue},80%,55%,0)`);
+    vx.beginPath();
+    vx.fillStyle=capR;
+    vx.arc(x,VH-finalH,w*1.2,0,Math.PI*2);
+    vx.fill();
+  });
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+  const baseG=vx.createLinearGradient(0,VH-2,VW,VH-2);
+  baseG.addColorStop(0,'rgba(255,106,26,0)');
+  baseG.addColorStop(.2,'rgba(255,106,26,.4)');
+  baseG.addColorStop(.5,'rgba(255,180,80,.6)');
+  baseG.addColorStop(.8,'rgba(255,106,26,.4)');
+  baseG.addColorStop(1,'rgba(255,106,26,0)');
+  vx.fillStyle=baseG;
+  vx.fillRect(0,VH-3,VW,3);
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+  const ambG=vx.createLinearGradient(0,VH-200,0,VH);
+  ambG.addColorStop(0,'rgba(255,106,26,0)');
+  ambG.addColorStop(1,'rgba(255,80,0,.07)');
+  vx.fillStyle=ambG;
+  vx.fillRect(0,VH-200,VW,200);
+
+/* MADE BY SHRESHTH ( FUCK U DONT COPY MY HARDWORK. NIGGA CLOSE THE FILE OR U GET UR ASS KICKED )*/
+  const scanY=VH-(Math.sin(vt*.4)*.5+.5)*VH*.7;
+  const scanG=vx.createLinearGradient(0,scanY-1,0,scanY+1);
+  scanG.addColorStop(0,'rgba(255,180,80,0)');
+  scanG.addColorStop(.5,'rgba(255,150,50,.15)');
+  scanG.addColorStop(1,'rgba(255,180,80,0)');
+  vx.fillStyle=scanG;
+  vx.fillRect(0,scanY-6,VW,12);
+}
+drawVol();
+</script>
+</body>
+</html>
